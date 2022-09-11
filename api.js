@@ -20,8 +20,7 @@ load = function (){
     });
 };
 
-priview = function (){
-    console.log($("#card-id").val())
+preview = function (){
     $.ajax({
         url: "https://api.pokemontcg.io/v2/cards/" + $("#card-id").val(),
         type: "GET",
@@ -39,3 +38,6 @@ priview = function (){
         }
     });
 };
+
+
+$("#card-img").mouseover(preview());
